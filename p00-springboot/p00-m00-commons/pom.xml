@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>p00-m00-commons</artifactId>
+  <version>1.0.0</version>
+
+  <name>${project.artifactId}</name>
+  <description>通用</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>p00-springboot</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
+    <!--FastJson-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+    </dependency>
+    <!--Spring事务-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

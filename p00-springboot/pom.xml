@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>p00-springboot</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+
+  <name>${project.artifactId}</name>
+  <description>SpringBoot版</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>cloud-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <modules>
+    <module>p00-m00-commons</module>
+    <module>p00-m01-provider8080</module>
+    <module>p00-m02-consumer80</module>
+  </modules>
+
+  <properties>
+    <!--本地commons-->
+    <commons.version>1.0.0</commons.version>
+    <!--本地provider8080-->
+    <provider8080.version>1.0.0</provider8080.version>
+    <!--本地consumer80-->
+    <consumer80.version>1.0.0</consumer80.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--本地commons-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p00-m00-commons</artifactId>
+        <version>${commons.version}</version>
+      </dependency>
+      <!--本地provider8080-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p00-m01-provider8080</artifactId>
+        <version>${provider8080.version}</version>
+      </dependency>
+      <!--本地consumer80-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p00-m02-consumer80</artifactId>
+        <version>${consumer80.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
