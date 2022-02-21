@@ -1,6 +1,6 @@
 spring:
   application:
-    name: p02-eureka-cluster-m02-consumer80
+    name: eureka-cluster-consumer
   profiles:
     active: dev
 
@@ -15,8 +15,8 @@ eureka:
     fetch-registry: true
     # 服务端地址
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 
 logging:
   file:
-    name: /log/cloud-demo/${spring.application.name}.log
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log

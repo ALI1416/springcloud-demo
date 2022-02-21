@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: provider-cluster-consumer
+  profiles:
+    active: dev
+
+server:
+  port: 80
+
+eureka:
+  client:
+    # 是否注册(自己是客户端，需要)
+    register-with-eureka: true
+    # 是否需要检索服务(服务端是集群模式，需要)
+    fetch-registry: true
+    # 服务端地址
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
+logging:
+  file:
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log

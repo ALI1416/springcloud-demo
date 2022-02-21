@@ -1,6 +1,6 @@
 spring:
   application:
-    name: p02-eureka-cluster-m03-eureka-server7002
+    name: eureka-cluster-eureka-server
   profiles:
     active: dev
 
@@ -26,4 +26,4 @@ eureka:
 
 logging:
   file:
-    name: /log/cloud-demo/${spring.application.name}.log
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log

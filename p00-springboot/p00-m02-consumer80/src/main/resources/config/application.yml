@@ -1,6 +1,6 @@
 spring:
   application:
-    name: p00-springboot-m02-consumer80
+    name: springboot-consumer
   profiles:
     active: dev
 
@@ -9,4 +9,4 @@ server:
 
 logging:
   file:
-    name: /log/cloud-demo/${spring.application.name}.log
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log

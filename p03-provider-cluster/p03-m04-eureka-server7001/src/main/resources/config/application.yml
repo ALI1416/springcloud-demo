@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: provider-cluster-eureka-server
+  profiles:
+    active: dev
+
+server:
+  port: 7001
+
+eureka:
+  instance:
+    # 服务端实例名称(集群名称不能重复)
+    # 修改host文件 C:\Windows\System32\drivers\etc\hosts
+    # 新增127.0.0.1映射，格式为 IP地址 域名
+    # 例如：127.0.0.1 eureka7001.com
+    hostname: eureka7001.com
+  client:
+    # 是否注册(自己是服务端，不需要)
+    register-with-eureka: false
+    # 是否需要检索服务(自己是服务端，不需要)
+    fetch-registry: false
+    # 服务地址
+    service-url:
+      # 集群需要注册其他服务(多个服务用逗号隔开)
+      defaultZone: http://eureka7002.com:7002/eureka/
+
+logging:
+  file:
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log

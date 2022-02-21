@@ -23,6 +23,7 @@
     <module>p00-springboot</module>
     <module>p01-eureka-single</module>
     <module>p02-eureka-cluster</module>
+    <module>p03-provider-cluster</module>
   </modules>
 
   <properties>
