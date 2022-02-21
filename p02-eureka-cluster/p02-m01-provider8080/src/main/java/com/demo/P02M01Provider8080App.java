@@ -19,10 +19,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 // 注册Eureka客户端
 @EnableEurekaClient
-public class P01M01Provider8080App {
+public class P02M01Provider8080App {
 
     public static void main(String[] args) {
-        SpringApplication.run(P01M01Provider8080App.class, args);
+        SpringApplication.run(P02M01Provider8080App.class, args);
     }
 
 }
