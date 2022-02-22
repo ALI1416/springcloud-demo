@@ -8,6 +8,15 @@ server:
   port: 80
 
 eureka:
+  instance:
+    # 修改服务名称
+    instance-id: ${spring.application.name}${server.port}
+    # 显示IP地址
+    prefer-ip-address: true
+#    # 每1秒钟发送一次心跳报文
+#    lease-renewal-interval-in-seconds: 1
+#    # 超过2秒钟未发送报文将被剔除
+#    lease-expiration-duration-in-seconds: 2
   client:
     # 是否注册(自己是客户端，需要)
     register-with-eureka: true

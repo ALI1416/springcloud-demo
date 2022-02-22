@@ -23,6 +23,11 @@ eureka:
     service-url:
       # 集群需要注册其他服务(多个服务用逗号隔开)
       defaultZone: http://eureka7002.com:7002/eureka/
+#  server:
+#    # 禁用自我保护机制
+#    enable-self-preservation: false
+#    # 2000毫秒无心跳报文立马被剔除
+#    eviction-interval-timer-in-ms: 2000
 
 logging:
   file:

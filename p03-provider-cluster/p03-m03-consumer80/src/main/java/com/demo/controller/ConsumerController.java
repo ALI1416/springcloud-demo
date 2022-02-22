@@ -4,6 +4,8 @@ import com.demo.entity.po.Payment;
 import com.demo.entity.pojo.Result;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,11 @@ public class ConsumerController {
     public static final String PAYMENT_URL = "http://PROVIDER-CLUSTER-PROVIDER/";
 
     private final RestTemplate restTemplate;
+
+    /**
+     * eureka服务发现
+     */
+    private final DiscoveryClient discoveryClient;
 
     /**
      * <h1>插入</h1>
@@ -59,6 +66,23 @@ public class ConsumerController {
         Result result = restTemplate.getForObject(PAYMENT_URL + "payment/findById/" + id, Result.class);
         log.info("查询id：{}，返回结果：{}", id, result);
         return result;
+    }
+
+    /**
+     * eureka服务发现
+     * GET http://localhost/consumer/discovery
+     */
+    @GetMapping("discovery")
+    public Result discovery() {
+        // 注册的服务
+        for (String service : discoveryClient.getServices()) {
+            log.info(service);
+            // 服务示例详情
+            for (ServiceInstance instance : discoveryClient.getInstances(service)) {
+                log.info(instance.toString());
+            }
+        }
+        return Result.o(discoveryClient);
     }
 
 }
