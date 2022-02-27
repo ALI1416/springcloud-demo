@@ -5,11 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * <h1>TODO ApplicationContextConfig Title</h1>
- *
- * <p>
- * TODO ApplicationContextConfig Description
- * </p>
+ * <h1>配置</h1>
  *
  * <p>
  * createDate 2022/02/20 11:37:40

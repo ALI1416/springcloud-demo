@@ -24,6 +24,8 @@
     <module>p01-eureka-single</module>
     <module>p02-eureka-cluster</module>
     <module>p03-provider-cluster</module>
+    <module>p04-zookeeper</module>
+    <module>p05-consul</module>
   </modules>
 
   <properties>

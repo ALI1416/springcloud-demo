@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zookeeper-provider
+  profiles:
+    active: dev
+  cloud:
+    zookeeper:
+      # 服务端地址(集群用逗号分开)
+      connect-string: 127.0.0.1:2181
+
+server:
+  port: 8080
+
+logging:
+  file:
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log
+
