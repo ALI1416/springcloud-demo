@@ -26,6 +26,8 @@
     <module>p03-provider-cluster</module>
     <module>p04-zookeeper</module>
     <module>p05-consul</module>
+    <module>p06-feign</module>
+    <module>p07-hystrix</module>
   </modules>
 
   <properties>
