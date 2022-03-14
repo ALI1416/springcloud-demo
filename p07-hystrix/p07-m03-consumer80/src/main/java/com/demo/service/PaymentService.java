@@ -3,7 +3,6 @@ package com.demo.service;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -20,10 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  **/
 @Component
 // 使用降级方法
-@FeignClient(value = "HYSTRIX-PROVIDER")
-// 实现接口，单独降级(报错)
-// @FeignClient(value = "HYSTRIX-PROVIDER", fallback = PaymentServiceFallback.class)
-@RequestMapping("payment")
+@FeignClient(value = "HYSTRIX-PROVIDER", path = "payment")
+// 实现接口，单独降级(无效)
+// @FeignClient(value = "HYSTRIX-PROVIDER", path = "payment", fallback = PaymentServiceFallback.class)
 public interface PaymentService {
 
     /**

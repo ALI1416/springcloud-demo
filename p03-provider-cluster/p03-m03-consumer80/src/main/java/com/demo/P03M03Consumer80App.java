@@ -1,10 +1,8 @@
 package com.demo;
 
-import com.ribbon.Random;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
  * <h1>消费者</h1>
@@ -19,8 +17,8 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @SpringBootApplication
 // 注册Eureka客户端
 @EnableEurekaClient
-// 自定义负债均衡
-@RibbonClient(name = "PROVIDER-CLUSTER-PROVIDER", configuration = Random.class)
+// 自定义负债均衡(新版Eureka已去掉ribbon)
+// @RibbonClient(name = "PROVIDER-CLUSTER-PROVIDER", configuration = Random.class)
 public class P03M03Consumer80App {
 
     public static void main(String[] args) {

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gateway-provider
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    # 是否注册(自己是客户端，需要)
+    register-with-eureka: true
+    # 是否需要检索服务(服务端是单机模式，不需要)
+    fetch-registry: false
+    # 服务端地址
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+logging:
+  file:
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log
+

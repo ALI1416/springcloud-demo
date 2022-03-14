@@ -13,7 +13,7 @@
 
   <parent>
     <groupId>com.demo</groupId>
-    <artifactId>cloud-parent</artifactId>
+    <artifactId>parent</artifactId>
     <version>1.0.0</version>
   </parent>
 
@@ -27,8 +27,6 @@
   <properties>
     <!--本地provider8080-->
     <provider8080.version>1.0.0</provider8080.version>
-    <!--本地provider8081-->
-    <provider8081.version>1.0.0</provider8081.version>
     <!--本地consumer80-->
     <consumer80.version>1.0.0</consumer80.version>
     <!--本地eureka-server7001-->

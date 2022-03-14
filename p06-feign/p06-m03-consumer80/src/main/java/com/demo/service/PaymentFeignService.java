@@ -19,10 +19,8 @@ import org.springframework.web.bind.annotation.*;
  * @since 1.0.0
  **/
 @Component
-// feign客户端(微服务地址)
-@FeignClient("FEIGN-PROVIDER")
-// 注意加前缀
-@RequestMapping("payment")
+// feign客户端(name是微服务地址，path是前缀)
+@FeignClient(name = "FEIGN-PROVIDER", path = "payment")
 public interface PaymentFeignService {
 
     /**

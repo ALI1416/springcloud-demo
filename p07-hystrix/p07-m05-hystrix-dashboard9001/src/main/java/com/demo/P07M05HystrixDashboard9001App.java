@@ -1,6 +1,5 @@
 package com.demo;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
@@ -21,12 +20,10 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @SpringBootApplication
 // 启用仪表盘
 @EnableHystrixDashboard
-@Slf4j
 public class P07M05HystrixDashboard9001App {
 
     public static void main(String[] args) {
         SpringApplication.run(P07M05HystrixDashboard9001App.class, args);
-        log.info("P07M05HystrixDashboard9001App");
     }
 
 }

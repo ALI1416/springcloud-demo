@@ -23,7 +23,7 @@ import java.util.UUID;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-// @RestController
+@RestController
 @AllArgsConstructor
 @RequestMapping("consumer")
 @Slf4j
@@ -72,7 +72,7 @@ public class ConsumerController {
      * @param time 毫秒
      */
     public String timeoutHandler(Integer time) {
-        return "超时访问fallback，线程池：" + Thread.currentThread().getName() + "，延时：" + time + "毫秒" + "，UUID：" + UUID.randomUUID();
+        return "降级处理，运行出错或超时1500毫秒调用降级方法，线程池：" + Thread.currentThread().getName() + "，延时：" + time + "毫秒" + "，UUID：" + UUID.randomUUID();
     }
 
 }

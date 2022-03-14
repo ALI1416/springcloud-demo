@@ -13,7 +13,7 @@
 
   <parent>
     <groupId>com.demo</groupId>
-    <artifactId>cloud-parent</artifactId>
+    <artifactId>parent</artifactId>
     <version>1.0.0</version>
   </parent>
 

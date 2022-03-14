@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
@@ -23,7 +24,7 @@ import java.util.UUID;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-// @RestController
+@RestController
 @AllArgsConstructor
 @RequestMapping("consumer2")
 @Slf4j
@@ -95,7 +96,7 @@ public class Consumer2Controller {
      * @param time 毫秒
      */
     public String timeoutHandler(Integer time) {
-        return "超时访问fallback，线程池：" + Thread.currentThread().getName() + "，延时：" + time + "毫秒" + "，UUID：" + UUID.randomUUID();
+        return "降级处理，运行出错或超时1500毫秒调用降级方法，线程池：" + Thread.currentThread().getName() + "，延时：" + time + "毫秒" + "，UUID：" + UUID.randomUUID();
     }
 
     /**

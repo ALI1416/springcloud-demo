@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: gateway-gateway-server
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      # discovery:
+        # locator:
+          # 开启创建动态路由(无效)
+          # enabled: true
+      routes:
+          # 路由id，没有规则，要求唯一
+        - id: a
+          # 路由地址
+          uri: http://localhost:8080
+          # 动态路由(无效)
+          # uri: lb://gateway-provider
+          # 断言 详情 https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gateway-request-predicates-factories
+          predicates:
+            - Path=/a/**
+          # 过滤器 https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gatewayfilter-factories
+          # 全局过滤器 https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#global-filters
+          # 一般使用自定义过滤器
+          # filters:
+        - id: b
+          # 路由地址
+          uri: http://localhost:8080
+          predicates:
+            - Path=/b
+
+server:
+  port: 9527
+
+eureka:
+  client:
+    # 是否注册(自己是客户端，需要)
+    register-with-eureka: true
+    # 是否需要检索服务(服务端是单机模式，不需要)
+    fetch-registry: false
+    # 服务端地址
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+logging:
+  file:
+    name: /log/cloud-demo/${spring.application.name}${server.port}.log

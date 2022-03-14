@@ -3,7 +3,6 @@ package com.demo.controller;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
  * @since 1.0.0
  **/
 @RestController
-@RequestMapping("consumer")
 @AllArgsConstructor
 @Slf4j
 public class ConsumerController {
@@ -28,9 +26,9 @@ public class ConsumerController {
     private final RestTemplate restTemplate;
 
     /**
-     * <h1>zk</h1>
+     * <h1>/</h1>
      */
-    @GetMapping("zk")
+    @GetMapping(value = {"", "/"})
     public String zk() {
         String result = restTemplate.postForObject(PAYMENT_URL + "payment/zk", null, String.class);
         log.info(result);

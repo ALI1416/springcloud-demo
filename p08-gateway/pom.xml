@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>p08-gateway</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+
+  <name>${project.artifactId}</name>
+  <description>gateway</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <modules>
+    <module>p08-m00-provider8080</module>
+    <module>p08-m01-provider8081</module>
+    <module>p08-m03-eureka-server7001</module>
+    <module>p08-m04-gateway-server9527</module>
+  </modules>
+
+  <properties>
+    <!--本地provider8080-->
+    <provider8080.version>1.0.0</provider8080.version>
+    <!--本地provider8081-->
+    <provider8081.version>1.0.0</provider8081.version>
+    <!--本地eureka7001-->
+    <eureka7001.version>1.0.0</eureka7001.version>
+    <!--本地gateway9527-->
+    <gateway9527.version>1.0.0</gateway9527.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--本地provider8080-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p08-m00-provider8080</artifactId>
+        <version>${provider8080.version}</version>
+      </dependency>
+      <!--本地provider8081-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p08-m01-provider8081</artifactId>
+        <version>${provider8081.version}</version>
+      </dependency>
+      <!--本地eureka7001-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p08-m03-eureka-server7001</artifactId>
+        <version>${eureka7001.version}</version>
+      </dependency>
+      <!--本地gateway9527-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>p08-m04-gateway-server9527</artifactId>
+        <version>${gateway9527.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
