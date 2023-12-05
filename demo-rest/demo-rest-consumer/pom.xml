@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>util-spring-boot</artifactId>
+  <artifactId>demo-rest-consumer</artifactId>
   <version>1.0.0</version>
 
-  <name>util-spring-boot</name>
-  <description>Util SpringBoot SpringBoot工具</description>
+  <name>demo-rest-consumer</name>
+  <description>消费者</description>
 
   <parent>
-    <groupId>cn.404z</groupId>
-    <artifactId>packages</artifactId>
+    <groupId>com.demo</groupId>
+    <artifactId>demo-rest</artifactId>
     <version>1.0.0</version>
   </parent>
 
   <dependencies>
+    <!--SpringBoot Web-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <scope>provided</scope>
     </dependency>
+    <!--FastJson-->
     <dependency>
       <groupId>com.alibaba.fastjson2</groupId>
       <artifactId>fastjson2</artifactId>
-      <scope>provided</scope>
     </dependency>
+    <!--通用-->
     <dependency>
       <groupId>cn.404z</groupId>
-      <artifactId>util</artifactId>
-      <scope>provided</scope>
+      <artifactId>commons</artifactId>
+    </dependency>
+    <!--SpringBoot工具-->
+    <dependency>
+      <groupId>cn.404z</groupId>
+      <artifactId>util-spring-boot</artifactId>
     </dependency>
   </dependencies>
 

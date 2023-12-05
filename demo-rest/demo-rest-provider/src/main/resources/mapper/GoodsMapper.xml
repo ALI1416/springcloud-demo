@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.GoodsMapper">
+
+  <sql id="col">
+    id,name,price
+  </sql>
+
+  <insert id="insert" parameterType="Goods">
+    INSERT
+    goods(
+    <include refid="col"/>
+    )VALUES(
+    #{id},#{name},#{price}
+    )
+  </insert>
+
+  <select id="findById" parameterType="Long" resultType="Goods">
+    SELECT
+    <include refid="col"/>
+    FROM
+    goods
+    WHERE
+    id = #{id}
+  </select>
+
+  <select id="findByIdList" parameterType="Long" resultType="Goods">
+    SELECT
+    <include refid="col"/>
+    FROM
+    goods
+    WHERE
+    id IN
+    <foreach collection="idList" open="(" close=")" separator="," item="id">
+      #{id}
+    </foreach>
+  </select>
+
+</mapper>

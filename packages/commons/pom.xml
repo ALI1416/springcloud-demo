@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>commons</artifactId>
+  <version>1.0.0</version>
+
+  <name>commons</name>
+  <description>Commons 通用</description>
+
+  <parent>
+    <groupId>cn.404z</groupId>
+    <artifactId>packages</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
+    <!--实体层注解-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <!--日志-->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <!--FastJson-->
+    <dependency>
+      <groupId>com.alibaba.fastjson2</groupId>
+      <artifactId>fastjson2</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <!--Spring事务-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+</project>

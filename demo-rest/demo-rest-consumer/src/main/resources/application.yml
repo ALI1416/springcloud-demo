@@ -1,0 +1,18 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+    com.demo.mapper: trace
+  file:
+    name: /log/demo-rest-consumer.log

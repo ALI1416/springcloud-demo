@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>demo-rest</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+
+  <name>demo-rest</name>
+  <description>RestTemplate版</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>springcloud-demo</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <modules>
+    <module>demo-rest-consumer</module>
+    <module>demo-rest-provider</module>
+  </modules>
+
+  <properties>
+    <!--provider-->
+    <provider.version>1.0.0</provider.version>
+    <!--consumer-->
+    <consumer.version>1.0.0</consumer.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--本地provider8080-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-rest-provider</artifactId>
+        <version>${provider.version}</version>
+      </dependency>
+      <!--本地consumer80-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-rest-consumer</artifactId>
+        <version>${consumer.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
