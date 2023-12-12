@@ -63,11 +63,6 @@
     <!--org.apache.maven.plugins:maven-compiler-plugin-->
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 
-    <!--MySQL(与服务器版本号对应，不需一致)-->
-    <!--com.mysql:mysql-connector-j-->
-    <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-    <!--<mysql.version></mysql.version>-->
-
     <!--MongoDB(与服务器版本号对应，不需一致)-->
     <!--org.springframework.boot:spring-boot-starter-data-mongodb-->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
@@ -105,11 +100,6 @@
     <!--org.springframework.cloud:spring-cloud-dependencies-->
     <!-- https://mvnrepository.com/artifactorg.springframework.cloud/spring-cloud-dependencies -->
     <spring-cloud-dependencies.version>2021.0.5</spring-cloud-dependencies.version>
-    <!--MyBatis-->
-    <!--请使用2.x.x版本-->
-    <!--org.mybatis.spring.boot:mybatis-spring-boot-starter-->
-    <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
-    <mybatis.version>2.3.1</mybatis.version>
     <!--雪花ID生成器-->
     <!--cn.404z:id-spring-boot-autoconfigure-->
     <!-- https://mvnrepository.com/artifact/cn.404z/id-spring-boot-autoconfigure -->
@@ -122,8 +112,8 @@
     <!---->
     <!--项目包-->
     <!--通用-->
-    <!--cn.404z:commons-->
-    <commons.version>1.0.0</commons.version>
+    <!--cn.404z:common-->
+    <common.version>1.0.0</common.version>
     <!--工具-->
     <!--cn.404z:util-->
     <util.version>1.0.0</util.version>
@@ -177,12 +167,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!--MyBatis-->
-      <dependency>
-        <groupId>org.mybatis.spring.boot</groupId>
-        <artifactId>mybatis-spring-boot-starter</artifactId>
-        <version>${mybatis.version}</version>
-      </dependency>
       <!--雪花ID生成器-->
       <dependency>
         <groupId>cn.404z</groupId>
@@ -199,8 +183,8 @@
       <!--通用-->
       <dependency>
         <groupId>cn.404z</groupId>
-        <artifactId>commons</artifactId>
-        <version>${commons.version}</version>
+        <artifactId>common</artifactId>
+        <version>${common.version}</version>
       </dependency>
       <!--工具-->
       <dependency>

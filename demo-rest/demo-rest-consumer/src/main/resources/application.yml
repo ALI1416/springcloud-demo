@@ -13,6 +13,5 @@ server:
 logging:
   level:
     root: info
-    com.demo.mapper: trace
   file:
     name: /log/demo-rest-consumer.log

@@ -29,7 +29,7 @@
     <!--通用-->
     <dependency>
       <groupId>cn.404z</groupId>
-      <artifactId>commons</artifactId>
+      <artifactId>common</artifactId>
     </dependency>
     <!--SpringBoot工具-->
     <dependency>

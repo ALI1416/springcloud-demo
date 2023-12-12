@@ -6,19 +6,9 @@ spring:
     multipart:
       max-file-size: 4GB
       max-request-size: 4GB
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/goods?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    hikari:
-      max-lifetime: 60000
 
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: cn.z.entity
-  configuration:
-    map-underscore-to-camel-case: true
+server:
+  port: 8080
 
 id:
   machine-id: 0
@@ -28,6 +18,5 @@ id:
 logging:
   level:
     root: info
-    com.demo.mapper: trace
   file:
     name: /log/demo-rest-provider.log

@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>commons</artifactId>
+  <artifactId>common</artifactId>
   <version>1.0.0</version>
 
-  <name>commons</name>
-  <description>Commons 通用</description>
+  <name>common</name>
+  <description>Common 通用</description>
 
   <parent>
     <groupId>cn.404z</groupId>
@@ -33,12 +33,6 @@
     <dependency>
       <groupId>com.alibaba.fastjson2</groupId>
       <artifactId>fastjson2</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <!--Spring事务-->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>

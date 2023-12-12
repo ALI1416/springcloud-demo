@@ -2,7 +2,6 @@ package com.demo.config;
 
 import cn.z.constant.FormatConstant;
 import cn.z.spring.tool.FastJsonHttpMessageConverter;
-import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -20,7 +19,6 @@ import java.util.List;
  * @since 1.0.0
  **/
 @Configuration
-@AllArgsConstructor
 public class WebMvcConfig implements WebMvcConfigurer {
 
     /**

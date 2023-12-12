@@ -13,7 +13,7 @@
   <description>Packages 项目包</description>
 
   <modules>
-    <module>commons</module>
+    <module>common</module>
     <module>util</module>
     <module>util-spring-boot</module>
   </modules>
@@ -30,8 +30,6 @@
     <!--org.springframework.boot:spring-boot-starter-->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
     <springboot.version>2.6.13</springboot.version>
-    <!--Spring事务-->
-    <spring-tx.version>5.3.23</spring-tx.version>
     <!--Maven编译插件-->
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -48,8 +46,8 @@
     <fastjson.version>2.0.42</fastjson.version>
 
     <!--通用-->
-    <!--cn.404z:commons-->
-    <commons.version>1.0.0</commons.version>
+    <!--cn.404z:common-->
+    <common.version>1.0.0</common.version>
     <!--工具-->
     <!--cn.404z:util-->
     <util.version>1.0.0</util.version>
@@ -112,8 +110,8 @@
       <!--通用-->
       <dependency>
         <groupId>cn.404z</groupId>
-        <artifactId>commons</artifactId>
-        <version>${commons.version}</version>
+        <artifactId>common</artifactId>
+        <version>${common.version}</version>
       </dependency>
       <!--工具-->
       <dependency>
