@@ -54,7 +54,7 @@ public class GoodsController {
 
     /**
      * <h1>查询id数组</h1>
-     * http://127.0.0.1:8080/findByIdArray?idArray=0&idArray=1
+     * http://127.0.0.1:8080/findByIdArray?idArray=0,1
      */
     @GetMapping("findByIdArray")
     public Result<List<Goods>> findByIdArray(Long[] idArray) {
