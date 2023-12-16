@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>demo-feign-consumer</artifactId>
+  <artifactId>demo-feign-api</artifactId>
   <version>1.0.0</version>
 
-  <name>demo-feign-consumer</name>
-  <description>消费者</description>
+  <name>demo-feign-api</name>
+  <description>API</description>
 
   <parent>
     <groupId>com.demo</groupId>
@@ -16,30 +16,30 @@
   </parent>
 
   <dependencies>
-    <!--SpringBoot Web-->
+    <!--OpenFeign-->
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
-    <!--FastJson-->
+    <!--OpenFeign连接池-->
     <dependency>
-      <groupId>com.alibaba.fastjson2</groupId>
-      <artifactId>fastjson2</artifactId>
+      <groupId>io.github.openfeign</groupId>
+      <artifactId>feign-okhttp</artifactId>
     </dependency>
-    <!--nacos-->
+    <!--负载均衡-->
     <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-loadbalancer</artifactId>
     </dependency>
-    <!--API-->
+    <!--负载均衡缓存-->
     <dependency>
-      <groupId>com.demo</groupId>
-      <artifactId>demo-feign-api</artifactId>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
     </dependency>
-    <!--SpringBoot工具-->
+    <!--通用-->
     <dependency>
       <groupId>cn.404z</groupId>
-      <artifactId>util-spring-boot</artifactId>
+      <artifactId>common</artifactId>
     </dependency>
   </dependencies>
 

@@ -1,4 +1,4 @@
-package com.demo.feign;
+package com.demo.api;
 
 import cn.z.entity.po.Goods;
 import cn.z.entity.pojo.Result;

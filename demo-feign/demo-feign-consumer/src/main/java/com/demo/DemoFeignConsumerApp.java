@@ -1,5 +1,6 @@
 package com.demo;
 
+import com.demo.config.FeignConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -14,8 +15,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-// 启用OpenFeign
-@EnableFeignClients
+// 启用OpenFeign basePackages指定扫描的包 defaultConfiguration指定配置
+@EnableFeignClients(basePackages = "com.demo.api", defaultConfiguration = FeignConfig.class)
 @SpringBootApplication
 public class DemoFeignConsumerApp {
 
