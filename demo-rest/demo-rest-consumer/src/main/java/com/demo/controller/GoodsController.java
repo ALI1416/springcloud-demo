@@ -38,7 +38,7 @@ public class GoodsController {
 
     /**
      * <h1>插入</h1>
-     * http://127.0.0.1:8081/insert?name=apple&price=3
+     * http://127.0.0.1:8090/insert?name=apple&price=3
      */
     @GetMapping("insert")
     public Result<Goods> insert(Goods goods) {
@@ -60,7 +60,7 @@ public class GoodsController {
 
     /**
      * <h1>查询id</h1>
-     * http://127.0.0.1:8081/findById?id=0
+     * http://127.0.0.1:8090/findById?id=0
      */
     @GetMapping("findById")
     public Result<Goods> findById(long id) {
@@ -80,7 +80,7 @@ public class GoodsController {
 
     /**
      * <h1>查询id数组</h1>
-     * http://127.0.0.1:8081/findByIdArray?idArray=0,1
+     * http://127.0.0.1:8090/findByIdArray?idArray=0,1
      */
     @GetMapping("findByIdArray")
     public Result<List<Goods>> findByIdArray(Long[] idArray) {

@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>demo-rest</artifactId>
+  <artifactId>demo-nacos</artifactId>
   <packaging>pom</packaging>
   <version>1.0.0</version>
 
-  <name>demo-rest</name>
-  <description>RestTemplate版</description>
+  <name>demo-nacos</name>
+  <description>nacos</description>
 
   <parent>
     <groupId>com.demo</groupId>
@@ -18,8 +18,8 @@
   </parent>
 
   <modules>
-    <module>demo-rest-consumer</module>
-    <module>demo-rest-provider</module>
+    <module>demo-nacos-consumer</module>
+    <module>demo-nacos-provider</module>
   </modules>
 
   <properties>
@@ -34,13 +34,13 @@
       <!--消费者-->
       <dependency>
         <groupId>com.demo</groupId>
-        <artifactId>demo-rest-consumer</artifactId>
+        <artifactId>demo-nacos-consumer</artifactId>
         <version>${consumer.version}</version>
       </dependency>
       <!--提供者-->
       <dependency>
         <groupId>com.demo</groupId>
-        <artifactId>demo-rest-provider</artifactId>
+        <artifactId>demo-nacos-provider</artifactId>
         <version>${provider.version}</version>
       </dependency>
     </dependencies>

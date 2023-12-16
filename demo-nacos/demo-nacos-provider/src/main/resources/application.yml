@@ -1,0 +1,31 @@
+spring:
+  # 注册nacos需要指定服务名
+  application:
+    name: demo-nacos-provider
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+  cloud:
+    # 配置nacos地址
+    # 查看管理页面 http://127.0.0.1:8848/nacos 服务管理-服务列表
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+# 启动多个服务 IDEA-服务-找到该服务-右键-复制配置-修改选项-添加VM选项-填写 -Dserver.port=8081 以8081端口启动
+server:
+  port: 8080
+
+id:
+  machine-id: 0
+  machine-bits: 8
+  sequence-bits: 12
+
+logging:
+  level:
+    root: info
+  file:
+    name: /log/demo-nacos-provider.log

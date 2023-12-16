@@ -4,10 +4,7 @@ import cn.z.entity.po.Goods;
 import cn.z.entity.pojo.Result;
 import cn.z.id.Id;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +21,12 @@ import java.util.List;
  **/
 @RestController
 @Slf4j
+@RequestMapping("goods")
 public class GoodsController {
 
     /**
      * <h1>插入</h1>
-     * http://127.0.0.1:8080/insert<br>
+     * http://127.0.0.1:8080/goods/insert<br>
      * {"name":"苹果","price":2}
      */
     @PostMapping("insert")
@@ -40,7 +38,7 @@ public class GoodsController {
 
     /**
      * <h1>查询id</h1>
-     * http://127.0.0.1:8080/findById?id=0
+     * http://127.0.0.1:8080/goods/findById?id=0
      */
     @GetMapping("findById")
     public Result<Goods> findById(long id) {
@@ -54,7 +52,7 @@ public class GoodsController {
 
     /**
      * <h1>查询id数组</h1>
-     * http://127.0.0.1:8080/findByIdArray?idArray=0,1
+     * http://127.0.0.1:8080/goods/findByIdArray?idArray=0,1
      */
     @GetMapping("findByIdArray")
     public Result<List<Goods>> findByIdArray(Long[] idArray) {
