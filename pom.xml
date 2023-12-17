@@ -28,6 +28,7 @@
     <module>demo-rest</module>
     <module>demo-nacos</module>
     <module>demo-feign</module>
+    <module>demo-gateway</module>
   </modules>
 
   <properties>

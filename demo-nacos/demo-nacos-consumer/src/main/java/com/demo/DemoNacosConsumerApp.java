@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * <h1>提供者</h1>
+ * <h1>消费者</h1>
  *
  * <p>
  * createDate 2022/02/19 17:14:57

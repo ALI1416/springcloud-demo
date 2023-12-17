@@ -9,7 +9,7 @@
   <version>1.0.0</version>
 
   <name>demo-feign</name>
-  <description>feign</description>
+  <description>OpenFeign</description>
 
   <parent>
     <groupId>com.demo</groupId>

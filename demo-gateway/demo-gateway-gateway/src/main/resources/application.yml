@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: demo-gateway-gateway
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+    # 网关配置
+    gateway:
+      # 路由
+      routes:
+        # 名称
+        - id: consumer
+          # 服务名称 lb://代表负载均衡
+          uri: lb://demo-gateway-consumer
+          # 断言 所有断言名称 https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway/request-predicates-factories.html
+          predicates:
+            # 断言名称 Path代表路径匹配
+            - name: Path
+              # 断言参数 /consumer/**代表匹配路径
+              args:
+                - /consumer/**
+        - id: goods
+          uri: lb://demo-gateway-provider-goods
+          predicates:
+            # 简写 =前路径匹配 =后参数列表(多个参数用,分隔)
+            - Path=/goods/**
+        - id: test
+          uri: lb://demo-gateway-provider-test
+          predicates:
+            - Path=/test/**
+          # 过滤器 所有过滤器名称 https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway/gatewayfilter-factories.html
+          filters:
+            # AddRequestHeader代表添加请求头 第一个值是key 第二个值是value
+            - AddRequestHeader=hello,world
+      # 全局默认过滤器
+      default-filters:
+        - AddRequestHeader=hi,jack
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+  file:
+    name: /log/demo-gateway-gateway.log

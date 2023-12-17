@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: demo-gateway-provider-goods
   devtools:
     restart:
       enabled: true
@@ -6,12 +8,15 @@ spring:
     multipart:
       max-file-size: 4GB
       max-request-size: 4GB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
 
 server:
-  port: 8080
+  port: 9080
 
 logging:
   level:
     root: info
   file:
-    name: /log/demo-rest-provider.log
+    name: /log/demo-gateway-provider-goods.log

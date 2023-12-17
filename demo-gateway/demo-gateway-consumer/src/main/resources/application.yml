@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo-feign-provider
+    name: demo-gateway-consumer
   devtools:
     restart:
       enabled: true
@@ -12,11 +12,16 @@ spring:
     nacos:
       server-addr: 127.0.0.1:8848
 
+feign:
+  okhttp:
+    enabled: true
+
 server:
-  port: 8080
+  port: 8090
 
 logging:
   level:
     root: info
+    com.demo.api: trace
   file:
-    name: /log/demo-feign-provider.log
+    name: /log/demo-gateway-consumer.log

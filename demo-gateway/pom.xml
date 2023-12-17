@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>demo-gateway</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+
+  <name>demo-gateway</name>
+  <description>网关</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>springcloud-demo</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <modules>
+    <module>demo-gateway-gateway</module>
+    <module>demo-gateway-consumer</module>
+    <module>demo-gateway-provider-goods</module>
+    <module>demo-gateway-provider-test</module>
+    <module>demo-gateway-api</module>
+  </modules>
+
+  <properties>
+    <!--网关-->
+    <gateway.version>1.0.0</gateway.version>
+    <!--消费者-->
+    <consumer.version>1.0.0</consumer.version>
+    <!--提供者-商品-->
+    <provider-goods.version>1.0.0</provider-goods.version>
+    <!--提供者-测试-->
+    <provider-test.version>1.0.0</provider-test.version>
+    <!--API-->
+    <api.version>1.0.0</api.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--网关-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-gateway-gateway</artifactId>
+        <version>${gateway.version}</version>
+      </dependency>
+      <!--消费者-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-gateway-consumer</artifactId>
+        <version>${consumer.version}</version>
+      </dependency>
+      <!--提供者-商品-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-gateway-provider-goods</artifactId>
+        <version>${provider-goods.version}</version>
+      </dependency>
+      <!--提供者-测试-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-gateway-provider-test</artifactId>
+        <version>${provider-test.version}</version>
+      </dependency>
+      <!--API-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-gateway-api</artifactId>
+        <version>${api.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
