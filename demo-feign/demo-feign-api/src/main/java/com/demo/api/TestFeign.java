@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-// vaule调用的服务名称 path请求地址前缀 contextId避免使用相同服务名称注入Bean失败
+// value调用的服务名称 path请求地址前缀 contextId避免使用相同服务名称注入Bean失败
 @FeignClient(value = "demo-feign-provider", path = "test", contextId = "test")
 public interface TestFeign {
 
