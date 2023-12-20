@@ -15,7 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-@EnableFeignClients(basePackages = "com.demo.api", defaultConfiguration = FeignConfig.class)
+@EnableFeignClients(basePackages = "cn.z.api", defaultConfiguration = FeignConfig.class)
 @SpringBootApplication
 public class DemoGatewayProviderGoodsApp {
 

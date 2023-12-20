@@ -1,4 +1,4 @@
-package com.demo.api;
+package cn.z.api;
 
 import cn.z.entity.po.Goods;
 import cn.z.entity.pojo.Result;

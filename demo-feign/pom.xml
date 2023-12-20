@@ -20,7 +20,6 @@
   <modules>
     <module>demo-feign-consumer</module>
     <module>demo-feign-provider</module>
-    <module>demo-feign-api</module>
   </modules>
 
   <properties>
@@ -28,8 +27,6 @@
     <consumer.version>1.0.0</consumer.version>
     <!--提供者-->
     <provider.version>1.0.0</provider.version>
-    <!--API-->
-    <api.version>1.0.0</api.version>
   </properties>
 
   <dependencyManagement>
@@ -45,12 +42,6 @@
         <groupId>com.demo</groupId>
         <artifactId>demo-feign-provider</artifactId>
         <version>${provider.version}</version>
-      </dependency>
-      <!--API-->
-      <dependency>
-        <groupId>com.demo</groupId>
-        <artifactId>demo-feign-api</artifactId>
-        <version>${api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

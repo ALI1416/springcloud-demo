@@ -16,6 +16,8 @@
     <module>common</module>
     <module>util</module>
     <module>util-spring-boot</module>
+    <module>demo-feign-api</module>
+    <module>demo-gateway-api</module>
   </modules>
 
   <properties>
@@ -44,6 +46,22 @@
     <!--com.alibaba.fastjson2:fastjson2-->
     <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
     <fastjson.version>2.0.42</fastjson.version>
+    <!--OpenFeign-->
+    <!--org.springframework.cloud:spring-cloud-starter-openfeign-->
+    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+    <openfeign.version>3.1.5</openfeign.version>
+    <!--OpenFeign连接池-->
+    <!--io.github.openfeign:feign-okhttp-->
+    <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-okhttp -->
+    <feign-okhttp.version>11.10</feign-okhttp.version>
+    <!--负载均衡-->
+    <!--org.springframework.cloud:spring-cloud-starter-loadbalancer-->
+    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-loadbalancer -->
+    <loadbalancer.version>3.1.5</loadbalancer.version>
+    <!--负载均衡缓存-->
+    <!--com.github.ben-manes.caffeine:caffeine-->
+    <!-- https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine -->
+    <caffeine.version>2.9.3</caffeine.version>
 
     <!--通用-->
     <!--cn.404z:common-->
@@ -54,6 +72,10 @@
     <!--SpringBoot工具-->
     <!--cn.404z:util-spring-boot-->
     <util-spring-boot.version>1.0.0</util-spring-boot.version>
+    <!--demo-feign-api-->
+    <demo-feign-api.version>1.0.0</demo-feign-api.version>
+    <!--demo-gateway-api-->
+    <demo-gateway-api.version>1.0.0</demo-gateway-api.version>
   </properties>
 
   <dependencyManagement>
@@ -88,12 +110,6 @@
         <artifactId>spring-boot-starter-web</artifactId>
         <version>${springboot.version}</version>
       </dependency>
-      <!--Spring事务-->
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-tx</artifactId>
-        <version>${spring-tx.version}</version>
-      </dependency>
       <!--自动装配-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -105,6 +121,30 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-configuration-processor</artifactId>
         <version>${springboot.version}</version>
+      </dependency>
+      <!--OpenFeign-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+        <version>${openfeign.version}</version>
+      </dependency>
+      <!--OpenFeign连接池-->
+      <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-okhttp</artifactId>
+        <version>${feign-okhttp.version}</version>
+      </dependency>
+      <!--负载均衡-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        <version>${loadbalancer.version}</version>
+      </dependency>
+      <!--负载均衡缓存-->
+      <dependency>
+        <groupId>com.github.ben-manes.caffeine</groupId>
+        <artifactId>caffeine</artifactId>
+        <version>${caffeine.version}</version>
       </dependency>
 
       <!--通用-->
@@ -124,6 +164,18 @@
         <groupId>cn.404z</groupId>
         <artifactId>util-spring-boot</artifactId>
         <version>${util-spring-boot.version}</version>
+      </dependency>
+      <!--demo-feign-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-feign-api</artifactId>
+        <version>${demo-feign-api.version}</version>
+      </dependency>
+      <!--demo-gateway-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-gateway-api</artifactId>
+        <version>${demo-gateway-api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -31,9 +31,9 @@
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
-    <!--API-->
+    <!--demo-feign-api-->
     <dependency>
-      <groupId>com.demo</groupId>
+      <groupId>cn.404z</groupId>
       <artifactId>demo-feign-api</artifactId>
     </dependency>
     <!--SpringBoot工具-->

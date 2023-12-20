@@ -16,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @since 1.0.0
  **/
 @SpringBootApplication
-@EnableFeignClients(basePackages = "com.demo.api", defaultConfiguration = FeignConfig.class)
+@EnableFeignClients(basePackages = "cn.z.api", defaultConfiguration = FeignConfig.class)
 public class DemoGatewayGatewayApp {
 
     /* consumer */
@@ -26,7 +26,7 @@ public class DemoGatewayGatewayApp {
     // 获取 http://127.0.0.1:8080/consumer/get
     // 获取2 http://127.0.0.1:8080/consumer/get2
     /* goods */
-    // 插入 http://127.0.0.1:8080/goods/insert?name=apple&price=3
+    // 插入 POST http://127.0.0.1:8080/goods/insert?name=apple&price=3
     // 查询id http://127.0.0.1:8080/goods/findById?id=0
     // 查询id数组 http://127.0.0.1:8080/goods/findByIdArray?idArray=0,1
     // 获取2 http://127.0.0.1:8080/goods/get2

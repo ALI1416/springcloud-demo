@@ -36,9 +36,9 @@
       <groupId>cn.404z</groupId>
       <artifactId>id-spring-boot-autoconfigure</artifactId>
     </dependency>
-    <!--API-->
+    <!--demo-gateway-api-->
     <dependency>
-      <groupId>com.demo</groupId>
+      <groupId>cn.404z</groupId>
       <artifactId>demo-gateway-api</artifactId>
     </dependency>
     <!--SpringBoot工具-->

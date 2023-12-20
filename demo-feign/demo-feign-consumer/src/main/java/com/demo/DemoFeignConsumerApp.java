@@ -16,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @since 1.0.0
  **/
 // 启用OpenFeign basePackages指定扫描的包 defaultConfiguration指定配置
-@EnableFeignClients(basePackages = "com.demo.api", defaultConfiguration = FeignConfig.class)
+@EnableFeignClients(basePackages = "cn.z.api", defaultConfiguration = FeignConfig.class)
 @SpringBootApplication
 public class DemoFeignConsumerApp {
 

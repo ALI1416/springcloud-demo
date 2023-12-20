@@ -123,6 +123,10 @@
     <!--SpringBoot工具-->
     <!--cn.404z:util-spring-boot-->
     <util-spring-boot.version>1.0.0</util-spring-boot.version>
+    <!--demo-feign-api-->
+    <demo-feign-api.version>1.0.0</demo-feign-api.version>
+    <!--demo-gateway-api-->
+    <demo-gateway-api.version>1.0.0</demo-gateway-api.version>
   </properties>
 
   <dependencies>
@@ -200,6 +204,18 @@
         <groupId>cn.404z</groupId>
         <artifactId>util-spring-boot</artifactId>
         <version>${util-spring-boot.version}</version>
+      </dependency>
+      <!--demo-feign-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-feign-api</artifactId>
+        <version>${demo-feign-api.version}</version>
+      </dependency>
+      <!--demo-gateway-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-gateway-api</artifactId>
+        <version>${demo-gateway-api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -1,7 +1,7 @@
 package com.demo.controller;
 
+import cn.z.api.TestFeign;
 import cn.z.entity.pojo.Result;
-import com.demo.api.TestFeign;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

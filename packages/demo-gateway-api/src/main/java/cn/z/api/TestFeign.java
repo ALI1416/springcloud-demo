@@ -1,4 +1,4 @@
-package com.demo.api;
+package cn.z.api;
 
 import cn.z.entity.pojo.Result;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-// value调用的服务名称 path请求地址前缀 contextId避免使用相同服务名称注入Bean失败
-@FeignClient(value = "demo-feign-provider", path = "test", contextId = "test")
+@FeignClient(value = "demo-gateway-provider-test", path = "test", contextId = "test")
 public interface TestFeign {
 
     /**
@@ -23,5 +22,11 @@ public interface TestFeign {
      */
     @GetMapping("get")
     Result<Long> get();
+
+    /**
+     * <h1>获取2</h1>
+     */
+    @GetMapping("get2")
+    Result<Long> get2();
 
 }

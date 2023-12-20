@@ -22,7 +22,6 @@
     <module>demo-gateway-consumer</module>
     <module>demo-gateway-provider-goods</module>
     <module>demo-gateway-provider-test</module>
-    <module>demo-gateway-api</module>
   </modules>
 
   <properties>
@@ -34,8 +33,6 @@
     <provider-goods.version>1.0.0</provider-goods.version>
     <!--提供者-测试-->
     <provider-test.version>1.0.0</provider-test.version>
-    <!--API-->
-    <api.version>1.0.0</api.version>
   </properties>
 
   <dependencyManagement>
@@ -63,12 +60,6 @@
         <groupId>com.demo</groupId>
         <artifactId>demo-gateway-provider-test</artifactId>
         <version>${provider-test.version}</version>
-      </dependency>
-      <!--API-->
-      <dependency>
-        <groupId>com.demo</groupId>
-        <artifactId>demo-gateway-api</artifactId>
-        <version>${api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
