@@ -75,4 +75,15 @@ public class ConsumerController {
         return result;
     }
 
+    /**
+     * <h1>获取2</h1>
+     * http://127.0.0.1:8090/consumer/get2
+     */
+    @GetMapping("get2")
+    public Result<Long> get2() {
+        Result<Long> result = testFeign.get2();
+        log.info("获取2 {}", result);
+        return result;
+    }
+
 }

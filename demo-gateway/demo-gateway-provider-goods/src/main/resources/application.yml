@@ -12,11 +12,16 @@ spring:
     nacos:
       server-addr: 127.0.0.1:8848
 
+feign:
+  okhttp:
+    enabled: true
+
 server:
   port: 9080
 
 logging:
   level:
     root: info
+    com.demo.api: trace
   file:
     name: /log/demo-gateway-provider-goods.log

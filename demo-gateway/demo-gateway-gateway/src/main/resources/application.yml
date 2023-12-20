@@ -39,6 +39,8 @@ spring:
           filters:
             # AddRequestHeader代表添加请求头 第一个值是key 第二个值是value
             - AddRequestHeader=hello,world
+            # 自定义网关过滤器
+            - My=123,abc,!@#
       # 全局默认过滤器
       default-filters:
         - AddRequestHeader=hi,jack

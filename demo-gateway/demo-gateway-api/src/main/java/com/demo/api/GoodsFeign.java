@@ -42,4 +42,10 @@ public interface GoodsFeign {
     @GetMapping("findByIdArray")
     Result<List<Goods>> findByIdArray(@RequestParam("idArray") Long[] idArray);
 
+    /**
+     * <h1>获取2</h1>
+     */
+    @GetMapping("get2")
+    Result<Long> get2();
+
 }

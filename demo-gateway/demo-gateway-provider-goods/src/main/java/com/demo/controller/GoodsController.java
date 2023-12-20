@@ -3,6 +3,8 @@ package com.demo.controller;
 import cn.z.entity.po.Goods;
 import cn.z.entity.pojo.Result;
 import cn.z.id.Id;
+import com.demo.api.TestFeign;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,9 +23,12 @@ import java.util.List;
  * @since 1.0.0
  **/
 @RestController
+@AllArgsConstructor
 @Slf4j
 @RequestMapping("goods")
 public class GoodsController {
+
+    private final TestFeign testFeign;
 
     /**
      * <h1>插入</h1>
@@ -71,6 +76,17 @@ public class GoodsController {
         }
         log.info("查询id数组 {}", list);
         return Result.o(list);
+    }
+
+    /**
+     * <h1>获取2</h1>
+     * http://127.0.0.1:8090/consumer/get2
+     */
+    @GetMapping("get2")
+    public Result<Long> get2() {
+        Result<Long> result = testFeign.get2();
+        log.info("获取2 {}", result);
+        return result;
     }
 
 }

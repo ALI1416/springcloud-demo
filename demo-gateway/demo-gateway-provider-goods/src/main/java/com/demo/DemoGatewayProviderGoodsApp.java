@@ -1,7 +1,9 @@
 package com.demo;
 
+import com.demo.config.FeignConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * <h1>提供者-商品</h1>
@@ -13,6 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
+@EnableFeignClients(basePackages = "com.demo.api", defaultConfiguration = FeignConfig.class)
 @SpringBootApplication
 public class DemoGatewayProviderGoodsApp {
 

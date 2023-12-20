@@ -41,6 +41,11 @@
       <groupId>cn.404z</groupId>
       <artifactId>common</artifactId>
     </dependency>
+    <!--API-->
+    <dependency>
+      <groupId>com.demo</groupId>
+      <artifactId>demo-gateway-api</artifactId>
+    </dependency>
     <!--SpringBoot工具-->
     <dependency>
       <groupId>cn.404z</groupId>

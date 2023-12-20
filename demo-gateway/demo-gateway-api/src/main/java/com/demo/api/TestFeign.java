@@ -23,4 +23,10 @@ public interface TestFeign {
     @GetMapping("get")
     Result<Long> get();
 
+    /**
+     * <h1>获取2</h1>
+     */
+    @GetMapping("get2")
+    Result<Long> get2();
+
 }
