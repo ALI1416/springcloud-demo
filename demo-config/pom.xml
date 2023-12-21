@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>demo-config</artifactId>
+  <version>1.0.0</version>
+
+  <name>demo-config</name>
+  <description>nacos配置管理</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>springcloud-demo</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
+    <!--SpringBoot Web-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!--SpringCloud Bootstrap-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bootstrap</artifactId>
+    </dependency>
+    <!--自动配置-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-autoconfigure-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--配置-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--FastJson-->
+    <dependency>
+      <groupId>com.alibaba.fastjson2</groupId>
+      <artifactId>fastjson2</artifactId>
+    </dependency>
+    <!--nacos-->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>
+    <!--nacos配置管理-->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+    <!--雪花ID生成器-->
+    <dependency>
+      <groupId>cn.404z</groupId>
+      <artifactId>id-spring-boot-autoconfigure</artifactId>
+    </dependency>
+    <!--通用-->
+    <dependency>
+      <groupId>cn.404z</groupId>
+      <artifactId>common</artifactId>
+    </dependency>
+    <!--SpringBoot工具-->
+    <dependency>
+      <groupId>cn.404z</groupId>
+      <artifactId>util-spring-boot</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

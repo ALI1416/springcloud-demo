@@ -29,6 +29,7 @@
     <module>demo-nacos</module>
     <module>demo-feign</module>
     <module>demo-gateway</module>
+    <module>demo-config</module>
   </modules>
 
   <properties>

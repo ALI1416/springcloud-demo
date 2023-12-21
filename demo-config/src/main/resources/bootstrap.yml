@@ -1,0 +1,43 @@
+# 引导配置文件
+## 配置文件加载顺序
+### 程序启动
+#### ->(SpringCloud上下文)->加载bootstrap.yml->拉取nacos配置->初始化ApplicationContext
+#### ->(SpringBoot上下文)->加载application.yml->合并配置->初始化ApplicationContext
+
+spring:
+  application:
+    name: demo-config
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        # 配置文件后缀
+        file-extension: yml
+        # 共享的配置文件
+        shared-configs:
+          # 内容填写
+          # test:
+          #   a: 123
+          #   b: 456
+          #   c: 789
+          - data-id: shared-test.yml
+
+# 配置热更新 文件名 demo-config.yml
+# 内容填写
+# test2:
+#   a: 1
+#   b: 2
+#   c: 3
+
+logging:
+  level:
+    root: info
+  file:
+    name: /log/demo-config.log
