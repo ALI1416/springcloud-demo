@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo-feign-consumer
+    name: demo-sentinel-provider
   devtools:
     restart:
       enabled: true
@@ -12,18 +12,11 @@ spring:
     nacos:
       server-addr: 127.0.0.1:8848
 
-feign:
-  # 启用okhttp连接池
-  okhttp:
-    enabled: true
-
 server:
-  port: 8090
+  port: 8080
 
 logging:
   level:
     root: info
-    # 日志级别大于等于DEBUG才能输出
-    cn.z.api: trace
   file:
-    name: /log/demo-feign-consumer.log
+    name: /log/demo-sentinel-provider.log

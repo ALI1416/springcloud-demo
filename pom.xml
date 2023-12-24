@@ -30,6 +30,7 @@
     <module>demo-feign</module>
     <module>demo-gateway</module>
     <module>demo-config</module>
+    <module>demo-sentinel</module>
   </modules>
 
   <properties>
@@ -128,6 +129,8 @@
     <demo-feign-api.version>1.0.0</demo-feign-api.version>
     <!--demo-gateway-api-->
     <demo-gateway-api.version>1.0.0</demo-gateway-api.version>
+    <!--demo-sentinel-api-->
+    <demo-sentinel-api.version>1.0.0</demo-sentinel-api.version>
   </properties>
 
   <dependencies>
@@ -217,6 +220,12 @@
         <groupId>cn.404z</groupId>
         <artifactId>demo-gateway-api</artifactId>
         <version>${demo-gateway-api.version}</version>
+      </dependency>
+      <!--demo-sentinel-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-sentinel-api</artifactId>
+        <version>${demo-sentinel-api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

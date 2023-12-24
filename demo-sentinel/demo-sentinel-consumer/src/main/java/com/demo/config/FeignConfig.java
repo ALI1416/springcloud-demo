@@ -1,5 +1,6 @@
 package com.demo.config;
 
+import cn.z.api.fallback.TestFeignFallbackFactory;
 import feign.Logger;
 import org.springframework.context.annotation.Bean;
 
@@ -21,6 +22,14 @@ public class FeignConfig {
     @Bean
     public Logger.Level loggerLevel() {
         return Logger.Level.FULL;
+    }
+
+    /**
+     * 错误回调工厂
+     */
+    @Bean
+    public TestFeignFallbackFactory testFeignFallbackFactory() {
+        return new TestFeignFallbackFactory();
     }
 
 }

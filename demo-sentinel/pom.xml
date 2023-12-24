@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>demo-sentinel</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+
+  <name>demo-sentinel</name>
+  <description>sentinel</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>springcloud-demo</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <modules>
+    <module>demo-sentinel-consumer</module>
+    <module>demo-sentinel-provider</module>
+  </modules>
+
+  <properties>
+    <!--消费者-->
+    <consumer.version>1.0.0</consumer.version>
+    <!--提供者-->
+    <provider.version>1.0.0</provider.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--消费者-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-feign-consumer</artifactId>
+        <version>${consumer.version}</version>
+      </dependency>
+      <!--提供者-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-feign-provider</artifactId>
+        <version>${provider.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

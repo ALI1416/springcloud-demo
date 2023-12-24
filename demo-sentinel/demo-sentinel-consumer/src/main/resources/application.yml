@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: demo-sentinel-consumer
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        # 配置sentinel地址 使用
+        # java -Dserver.port=8849 -Dcsp.sentinel.dashboard.server=127.0.0.1:8849 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.6.jar
+        # 启动程序 查看管理页面 http://127.0.0.1:8849 账号 sentinel 密码 sentinel
+        dashboard: 127.0.0.1:8849
+      # 显示请求方式
+      http-method-specify: true
+
+feign:
+  okhttp:
+    enabled: true
+  sentinel:
+    # 开启feign对sentinel支持
+    enabled: true
+
+server:
+  port: 8090
+
+logging:
+  level:
+    root: info
+    cn.z.api: trace
+  file:
+    name: /log/demo-sentinel-consumer.log

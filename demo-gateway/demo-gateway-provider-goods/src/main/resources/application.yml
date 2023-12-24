@@ -22,6 +22,6 @@ server:
 logging:
   level:
     root: info
-    com.demo.api: trace
+    cn.z.api: trace
   file:
     name: /log/demo-gateway-provider-goods.log
