@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: demo-seata-consumer
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+# seata服务配置
+seata:
+  registry:
+    # 从nacos注册中心发现seata服务
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: SEATA_GROUP
+      # seata服务名称
+      application: seata-server
+  # 事物组名称
+  tx-service-group: demo-seata
+  service:
+    # 事物组与TC集群映射
+    vgroup-mapping:
+      demo-seata: default
+  # 模式，默认AT模式(速度快，不符合事务规范)，XA模式(速度慢，符合事务规范)
+#  data-source-proxy-mode: XA
+
+# seata程序配置
+#seata:
+#  registry:
+#    type: nacos
+#    nacos:
+#      server-addr: 127.0.0.1:8848
+#      username: nacos
+#      password: nacos
+#      group: SEATA_GROUP
+
+feign:
+  okhttp:
+    enabled: true
+
+server:
+  port: 8090
+
+logging:
+  level:
+    root: info
+    cn.z.api: trace
+  file:
+    name: /log/demo-seata-consumer.log

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>demo-seata</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0</version>
+
+  <name>demo-seata</name>
+  <description>seata</description>
+
+  <parent>
+    <groupId>com.demo</groupId>
+    <artifactId>springcloud-demo</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <modules>
+    <module>demo-seata-consumer</module>
+    <module>demo-seata-provider-goods</module>
+    <module>demo-seata-provider-test</module>
+  </modules>
+
+  <properties>
+    <!--消费者-->
+    <consumer.version>1.0.0</consumer.version>
+    <!--提供者-商品-->
+    <provider-goods.version>1.0.0</provider-goods.version>
+    <!--提供者-测试-->
+    <provider-test.version>1.0.0</provider-test.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--消费者-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-seata-consumer</artifactId>
+        <version>${consumer.version}</version>
+      </dependency>
+      <!--提供者-商品-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-seata-provider-goods</artifactId>
+        <version>${provider-goods.version}</version>
+      </dependency>
+      <!--提供者-测试-->
+      <dependency>
+        <groupId>com.demo</groupId>
+        <artifactId>demo-seata-provider-test</artifactId>
+        <version>${provider-test.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

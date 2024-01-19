@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>demo-seata-api</artifactId>
+  <version>1.0.0</version>
+
+  <name>demo-seata-api</name>
+  <description>demo-seata-api</description>
+
+  <parent>
+    <groupId>cn.404z</groupId>
+    <artifactId>packages</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
+    <!--OpenFeign-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <!--OpenFeign连接池-->
+    <dependency>
+      <groupId>io.github.openfeign</groupId>
+      <artifactId>feign-okhttp</artifactId>
+    </dependency>
+    <!--负载均衡-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+    </dependency>
+    <!--负载均衡缓存-->
+    <dependency>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
+    </dependency>
+    <!--通用-->
+    <dependency>
+      <groupId>cn.404z</groupId>
+      <artifactId>common</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>

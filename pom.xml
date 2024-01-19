@@ -31,6 +31,7 @@
     <module>demo-gateway</module>
     <module>demo-config</module>
     <module>demo-sentinel</module>
+    <module>demo-seata</module>
   </modules>
 
   <properties>
@@ -67,21 +68,6 @@
     <!--Maven编译插件-->
     <!--org.apache.maven.plugins:maven-compiler-plugin-->
     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-
-    <!--MongoDB(与服务器版本号对应，不需一致)-->
-    <!--org.springframework.boot:spring-boot-starter-data-mongodb-->
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
-    <!--<mongodb.version></mongodb.version>-->
-
-    <!--Redis(与服务器版本号不对应，不需一致)-->
-    <!--org.springframework.boot:spring-boot-starter-data-redis-->
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
-    <!--<jedis.version></jedis.version>-->
-
-    <!--RabbitMQ(与服务器版本号不对应，不需一致)-->
-    <!--org.springframework.boot:spring-boot-starter-amqp-->
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-amqp -->
-    <!--<rabbit-amqp-client.version></rabbit-amqp-client.version>-->
 
     <!--实体层注解(与IDE安装的版本号对应，不需一致)-->
     <!--org.projectlombok:lombok-->
@@ -131,6 +117,8 @@
     <demo-gateway-api.version>1.0.0</demo-gateway-api.version>
     <!--demo-sentinel-api-->
     <demo-sentinel-api.version>1.0.0</demo-sentinel-api.version>
+    <!--demo-seata-api-->
+    <demo-seata-api.version>1.0.0</demo-seata-api.version>
   </properties>
 
   <dependencies>
@@ -226,6 +214,12 @@
         <groupId>cn.404z</groupId>
         <artifactId>demo-sentinel-api</artifactId>
         <version>${demo-sentinel-api.version}</version>
+      </dependency>
+      <!--demo-seata-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-seata-api</artifactId>
+        <version>${demo-seata-api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

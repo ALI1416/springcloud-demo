@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: demo-seata-provider-goods
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 4GB
+      max-request-size: 4GB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: SEATA_GROUP
+      application: seata-server
+  tx-service-group: demo-seata
+  service:
+    vgroup-mapping:
+      demo-seata: default
+#  data-source-proxy-mode: XA
+
+feign:
+  okhttp:
+    enabled: true
+
+server:
+  port: 9080
+
+logging:
+  level:
+    root: info
+    cn.z.api: trace
+  file:
+    name: /log/demo-seata-provider-goods.log

@@ -19,6 +19,7 @@
     <module>demo-feign-api</module>
     <module>demo-gateway-api</module>
     <module>demo-sentinel-api</module>
+    <module>demo-seata-api</module>
   </modules>
 
   <properties>
@@ -79,6 +80,8 @@
     <demo-gateway-api.version>1.0.0</demo-gateway-api.version>
     <!--demo-sentinel-api-->
     <demo-sentinel-api.version>1.0.0</demo-sentinel-api.version>
+    <!--demo-seata-api-->
+    <demo-seata-api.version>1.0.0</demo-seata-api.version>
   </properties>
 
   <dependencyManagement>
@@ -185,6 +188,12 @@
         <groupId>cn.404z</groupId>
         <artifactId>demo-sentinel-api</artifactId>
         <version>${demo-sentinel-api.version}</version>
+      </dependency>
+      <!--demo-seata-api-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>demo-seata-api</artifactId>
+        <version>${demo-seata-api.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
