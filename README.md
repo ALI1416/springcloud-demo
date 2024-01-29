@@ -1,12 +1,12 @@
-# springcloud-demo SpringCloud示例
+# springcloud-demo SpringCloud示例(3.x版)
 
 [![License](https://img.shields.io/github/license/ALI1416/springcloud-demo?label=License)](https://opensource.org/licenses/BSD-3-Clause)
 [![Java Support](https://img.shields.io/badge/Java-8+-green)](https://openjdk.org/)
-[![Repo Size](https://img.shields.io/github/repo-size/ALI1416/springcloud-demo?label=Repo%20Size&color=success)](https://github.com/ALI1416/springcloud-demo/archive/refs/heads/master.zip)
+[![Repo Size](https://img.shields.io/github/repo-size/ALI1416/springcloud-demo?label=Repo%20Size&color=success)](https://github.com/ALI1416/springcloud-demo/archive/refs/heads/v3.zip)
 
 ## 简介
 
-SpringCloud示例
+SpringCloud示例(3.x版)
 
 ## 项目
 

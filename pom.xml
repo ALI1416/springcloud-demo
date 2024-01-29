@@ -10,17 +10,16 @@
   <version>1.0.0</version>
 
   <name>springcloud-demo</name>
-  <description>SpringCloud示例</description>
-  <url>https://github.com/ALI1416/springcloud-demo</url>
+  <description>SpringCloud示例(3.x版)</description>
+  <url>https://github.com/ALI1416/springcloud-demo/tree/v3</url>
 
   <parent>
     <!--SpringBoot Parent-->
-    <!--请使用2.x.x版本-->
     <!--org.springframework.boot:spring-boot-starter-parent-->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.6.13</version>
+    <version>3.0.2</version>
   </parent>
 
   <modules>
@@ -36,7 +35,7 @@
 
   <properties>
     <!--基础配置-->
-    <java.version>1.8</java.version>
+    <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
@@ -80,17 +79,17 @@
     <!-- https://spring.io/projects/spring-cloud#learn -->
     <!--选好SpringCloud版本后，点击`Reference Doc.`查看对应SpringBoot版本-->
     <!--SpringCloudAlibaba、SpringCloud和SpringBoot版本号对应关系查询-->
-    <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/版本说明#2021x-分支 -->
-    <!--推荐最新版 2021.0.5.0 2021.0.5 2.6.13-->
+    <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/版本说明 -->
+    <!--推荐最新版 2022.0.0.0 2022.0.0 3.0.2-->
 
     <!--SpringCloud Alibaba Dependencies-->
     <!--com.alibaba.cloud:spring-cloud-alibaba-dependencies-->
     <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-alibaba-dependencies -->
-    <spring-cloud-alibaba-dependencies.version>2021.0.5.0</spring-cloud-alibaba-dependencies.version>
+    <spring-cloud-alibaba-dependencies.version>2022.0.0.0</spring-cloud-alibaba-dependencies.version>
     <!--SpringCloud Dependencies-->
     <!--org.springframework.cloud:spring-cloud-dependencies-->
     <!-- https://mvnrepository.com/artifactorg.springframework.cloud/spring-cloud-dependencies -->
-    <spring-cloud-dependencies.version>2021.0.5</spring-cloud-dependencies.version>
+    <spring-cloud-dependencies.version>2022.0.0</spring-cloud-dependencies.version>
     <!--雪花ID生成器-->
     <!--cn.404z:id-spring-boot-autoconfigure-->
     <!-- https://mvnrepository.com/artifact/cn.404z/id-spring-boot-autoconfigure -->

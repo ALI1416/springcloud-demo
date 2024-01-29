@@ -63,7 +63,7 @@ public class TestController {
                 // 请求体
                 null,
                 // 响应体
-                new ParameterizedTypeReference<Result<Long>>() {
+                new ParameterizedTypeReference<>() {
                 }
         );
         Result<Long> body = response.getBody();

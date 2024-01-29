@@ -19,13 +19,12 @@ spring:
         dashboard: 127.0.0.1:8849
       # 显示请求方式
       http-method-specify: true
-
-feign:
-  okhttp:
-    enabled: true
-  sentinel:
-    # 开启feign对sentinel支持
-    enabled: true
+    openfeign:
+      okhttp:
+        enabled: true
+      sentinel:
+        # 开启feign对sentinel支持
+        enabled: true
 
 server:
   port: 8090

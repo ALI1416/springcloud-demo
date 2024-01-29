@@ -11,11 +11,10 @@ spring:
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
-
-feign:
-  # 启用okhttp连接池
-  okhttp:
-    enabled: true
+    openfeign:
+      # 启用okhttp连接池
+      okhttp:
+        enabled: true
 
 server:
   port: 8090

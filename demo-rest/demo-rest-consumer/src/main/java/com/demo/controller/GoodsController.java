@@ -50,7 +50,7 @@ public class GoodsController {
                 // 请求体
                 RequestEntity.post("").accept(MediaType.APPLICATION_JSON).body(goods),
                 // 响应体
-                new ParameterizedTypeReference<Result<Goods>>() {
+                new ParameterizedTypeReference<>() {
                 }
         );
         Result<Goods> body = response.getBody();
@@ -68,7 +68,7 @@ public class GoodsController {
                 URL + "findById?id={id}",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<Result<Goods>>() {
+                new ParameterizedTypeReference<>() {
                 },
                 // 参数
                 id
@@ -91,7 +91,7 @@ public class GoodsController {
                 URL + "findByIdArray?idArray={idArray}",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<Result<List<Goods>>>() {
+                new ParameterizedTypeReference<>() {
                 },
                 // 参数
                 param
