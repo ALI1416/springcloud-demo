@@ -51,19 +51,19 @@
     <!--OpenFeign-->
     <!--org.springframework.cloud:spring-cloud-starter-openfeign-->
     <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
-    <openfeign.version>3.1.5</openfeign.version>
+    <openfeign.version>4.0.0</openfeign.version>
     <!--OpenFeign连接池-->
     <!--io.github.openfeign:feign-okhttp-->
     <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-okhttp -->
-    <feign-okhttp.version>11.10</feign-okhttp.version>
+    <feign-okhttp.version>12.1</feign-okhttp.version>
     <!--负载均衡-->
     <!--org.springframework.cloud:spring-cloud-starter-loadbalancer-->
     <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-loadbalancer -->
-    <loadbalancer.version>3.1.5</loadbalancer.version>
+    <loadbalancer.version>4.0.0</loadbalancer.version>
     <!--负载均衡缓存-->
     <!--com.github.ben-manes.caffeine:caffeine-->
     <!-- https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine -->
-    <caffeine.version>2.9.3</caffeine.version>
+    <caffeine.version>3.1.2</caffeine.version>
 
     <!--通用-->
     <!--cn.404z:common-->
