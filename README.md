@@ -10,6 +10,101 @@ SpringCloud示例
 
 ## 项目
 
+- **`demo-rest`** : RestTemplate版
+  - **`demo-rest-consumer`** : 消费者
+    - SpringBoot Web
+    - FastJson
+  - **`demo-rest-provider`** : 提供者
+    - SpringBoot Web
+    - FastJson
+    - 雪花ID生成器
+- **`demo-nacos`** : nacos
+  - **`demo-nacos-consumer`** : 消费者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+  - **`demo-nacos-provider`** : 提供者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - 雪花ID生成器
+- **`demo-feign`** : feign
+  - **`demo-feign-consumer`** : 消费者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - **demo-feign-api**
+  - **`demo-feign-provider`** : 提供者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - 雪花ID生成器
+- **`demo-gateway`** : 网关
+  - **`demo-gateway-consumer`** : 消费者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - **demo-gateway-api**
+  - **`demo-gateway-gateway`** : 网关
+    - SpringBoot 网关
+    - FastJson
+    - nacos
+    - **demo-gateway-api**
+  - **`demo-gateway-provider-goods`** : 提供者-商品
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - 雪花ID生成器
+    - **demo-gateway-api**
+  - **`demo-gateway-provider-test`** : 提供者-测试
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - 雪花ID生成器
+- **`demo-config`** : nacos配置管理
+  - SpringBoot Web
+  - SpringCloud Bootstrap
+  - 自动配置
+  - 配置
+  - FastJson
+  - nacos
+  - nacos配置管理
+  - 雪花ID生成器
+- **`demo-sentinel`** : sentinel
+  - **`demo-sentinel-consumer`** : 消费者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - sentinel
+    - **demo-sentinel-api**
+  - **`demo-sentinel-provider`** : 提供者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - 雪花ID生成器
+- **`demo-seata`** : seata
+  - **`demo-seata-consumer`** : 消费者
+    - SpringBoot Web
+    - FastJson
+    - nacos
+    - seata
+    - **demo-seata-api**
+  - **`demo-seata-provider-goods`** : 提供者-商品
+    - SpringBoot Web
+    - Spring事务
+    - FastJson
+    - nacos
+    - seata
+    - 雪花ID生成器
+    - **demo-seata-api**
+  - **`demo-seata-provider-test`** : 提供者-测试
+    - SpringBoot Web
+    - Spring事务
+    - FastJson
+    - nacos
+    - seata
+    - 雪花ID生成器
+
 ## 版本号
 
 - 父依赖 :
