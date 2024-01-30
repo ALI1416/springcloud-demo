@@ -22,9 +22,9 @@ spring:
     openfeign:
       okhttp:
         enabled: true
-      sentinel:
-        # 开启feign对sentinel支持
-        enabled: true
+#      sentinel:
+#        # TODO 开启feign对sentinel支持
+#        enabled: true
 
 server:
   port: 8090

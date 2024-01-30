@@ -11,6 +11,9 @@ spring:
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
+    openfeign:
+      okhttp:
+        enabled: true
 
 # seata服务配置
 seata:
@@ -42,10 +45,6 @@ seata:
 #      username: nacos
 #      password: nacos
 #      group: SEATA_GROUP
-
-feign:
-  okhttp:
-    enabled: true
 
 server:
   port: 8090

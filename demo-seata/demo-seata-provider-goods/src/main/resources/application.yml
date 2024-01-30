@@ -30,7 +30,6 @@ seata:
       demo-seata: default
 #  data-source-proxy-mode: XA
 
-
 server:
   port: 9080
 

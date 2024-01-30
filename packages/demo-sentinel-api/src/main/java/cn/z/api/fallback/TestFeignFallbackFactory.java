@@ -26,14 +26,9 @@ public class TestFeignFallbackFactory implements FallbackFactory<TestFeign> {
      */
     @Override
     public TestFeign create(Throwable cause) {
-        return new TestFeign() {
-
-            @Override
-            public Result<Long> get() {
-                log.error("get", cause);
-                return Result.e(ResultEnum.SYSTEM_INNER_ERROR);
-            }
-
+        return () -> {
+            log.error("get", cause);
+            return Result.e(ResultEnum.SYSTEM_INNER_ERROR);
         };
     }
 
