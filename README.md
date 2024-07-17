@@ -110,30 +110,31 @@ SpringCloud示例
 - 父依赖 :
   - `SpringBoot Parent` : `org.springframework.boot:spring-boot-starter-parent`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-starter-parent?label=Maven%20Central)
-- 继承父依赖 :
+- 继承父依赖不可修改版本号 :
   - `SpringBoot Web` : `org.springframework.boot:spring-boot-starter-web`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-starter-web?label=Maven%20Central)
   - `热部署` : `org.springframework.boot:spring-boot-devtools`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-devtools?label=Maven%20Central)
-  - `配置` : `org.springframework.boot:spring-boot-configuration-processor`  
-    ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-configuration-processor?label=Maven%20Central)
   - `测试` : `org.springframework.boot:spring-boot-starter-test`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-starter-test?label=Maven%20Central)
+  - `配置` : `org.springframework.boot:spring-boot-configuration-processor`  
+    ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-configuration-processor?label=Maven%20Central)
   - `SpringBoot整合Maven插件` : `org.springframework.boot:spring-boot-maven-plugin`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.boot/spring-boot-maven-plugin?label=Maven%20Central)
-  - `Maven打包插件` : `org.apache.maven.plugins:maven-compiler-plugin`  
-    ![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven.plugins/maven-compiler-plugin?label=Maven%20Central)
-  - `实体层注解(与IDE安装的版本号对应，不需一致)` : `org.projectlombok:lombok`  
+- 继承父依赖可修改版本号 :
+  - `实体层注解` : `org.projectlombok:lombok`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.projectlombok/lombok?label=Maven%20Central)
+  - `Maven编译插件` : `org.apache.maven.plugins:maven-compiler-plugin`  
+    ![Maven Central](https://img.shields.io/maven-central/v/org.apache.maven.plugins/maven-compiler-plugin?label=Maven%20Central)
 - 父依赖不含 :
   - `SpringCloud Alibaba Dependencies` : `com.alibaba.cloud:spring-cloud-alibaba-dependencies`  
     ![Maven Central](https://img.shields.io/maven-central/v/com.alibaba.cloud/spring-cloud-alibaba-dependencies?label=Maven%20Central)
   - `SpringCloud Dependencies` : `org.springframework.cloud:spring-cloud-dependencies`  
     ![Maven Central](https://img.shields.io/maven-central/v/org.springframework.cloud/spring-cloud-dependencies?label=Maven%20Central)
-  - `雪花ID生成器` : `cn.404z:id-spring-boot-autoconfigure`  
-    ![Maven Central](https://img.shields.io/maven-central/v/cn.404z/id-spring-boot-autoconfigure?label=Maven%20Central)
   - `FastJson` : `com.alibaba.fastjson2:fastjson2`  
     ![Maven Central](https://img.shields.io/maven-central/v/com.alibaba.fastjson2/fastjson2?label=Maven%20Central)
+  - `雪花ID生成器` : `cn.404z:id-spring-boot-autoconfigure`  
+    ![Maven Central](https://img.shields.io/maven-central/v/cn.404z/id-spring-boot-autoconfigure?label=Maven%20Central)
 
 ## 关于
 

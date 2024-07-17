@@ -52,13 +52,13 @@
     <!--org.springframework.boot:spring-boot-devtools-->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
 
-    <!--配置-->
-    <!--org.springframework.boot:spring-boot-configuration-processor-->
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
-
     <!--测试-->
     <!--org.springframework.boot:spring-boot-starter-test-->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+
+    <!--配置-->
+    <!--org.springframework.boot:spring-boot-configuration-processor-->
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
 
     <!--SpringBoot打包插件-->
     <!--org.springframework.boot:spring-boot-maven-plugin-->
@@ -179,17 +179,17 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!--雪花ID生成器-->
-      <dependency>
-        <groupId>cn.404z</groupId>
-        <artifactId>id-spring-boot-autoconfigure</artifactId>
-        <version>${id.version}</version>
-      </dependency>
       <!--FastJson-->
       <dependency>
         <groupId>com.alibaba.fastjson2</groupId>
         <artifactId>fastjson2</artifactId>
         <version>${fastjson.version}</version>
+      </dependency>
+      <!--雪花ID生成器-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>id-spring-boot-autoconfigure</artifactId>
+        <version>${id.version}</version>
       </dependency>
 
       <!--通用-->
